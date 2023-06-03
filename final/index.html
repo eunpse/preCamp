@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>코드캠프 회원가입</title>
+    <link href="./index.css" rel="stylesheet">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>코드캠프 회원가입</h1>
+        <div class="info">
+            <input class="info__box" id="email" type="text" placeholder="이메일을 입력해주세요.">
+            <span class="blankCheck" id="emailCheck">이메일이 올바르지 않습니다.</span>
+            <input class="info__box" id="name" type="text" placeholder="이름을 입력해주세요.">
+            <span class="blankCheck" id="nameCheck">이름이 올바르지 않습니다.</span>
+            <input class="info__box" id="pw" type="text" placeholder="비밀번호를 입력해주세요.">
+            <span class="blankCheck" id="pwCheck">비밀번호가 올바르지 않습니다.</span>
+            <input class="info__box" id="pw2" type="text" placeholder="비밀번호를 다시 입력해주세요.">
+            <span class="blankCheck" id="pw2Check">비밀번호가 올바르지 않습니다.</span>
+        </div>
+        <div class="phone">
+            <input class="phone__box" id="phone1" oninput="phoneCheck()" type="text" maxlength="3"> - 
+            <input class="phone__box" id="phone2" oninput="phoneCheck()" type="text" maxlength="4"> - 
+            <input class="phone__box" id="phone3" oninput="phoneCheck()" type="text" maxlength="4">
+        </div>
+        <div class="auth">
+            <span class="authNum" id="authNum">000000</span>
+            <button class="authBtn" id="authBtn" disabled="true" onclick="authSend()">인증번호 전송</button>
+        </div>
+        <div class="timer">
+            <span class="time" id="time">3:00</span>
+            <button class="authCheck" id="authCheck" disabled="true" onclick="authCheck()">인증확인</button>
+        </div>
+        <div class="local">
+            <select class="localChoice">
+                <option selected="true" disabled="true">지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>경기</option>
+            </select>
+            <span class="blankCheck" id="localCheck">지역을 선택하세요.</span>
+        </div>
+        <div class="gender">
+            <div class="genderWrapper"><input type="radio" name="gender"><span>여성</span></div>
+            <div class="genderWrapper"><input type="radio" name="gender"><span>남성</span></div>
+        </div>
+        <span class="blankCheck" id="genderCheck">성별을 선택하세요.</span>
+        <div class="divideLine"></div>
+        <button class="submit" id="submit" onclick="submitCheck()">가입하기</button>
+    </div>
+</body>
+</html>
